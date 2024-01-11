@@ -19,7 +19,7 @@ RUN echo "DirectoryIndex vimeo.php index.html" >> /etc/apache2/apache2.conf
 
 RUN mkdir -p /var/www/html/api
 COPY vimeo.php /var/www/html/api
-
+RUN rm /var/www/html/
 
 
 # Set the maximum upload file size directly in the PHP configuration
