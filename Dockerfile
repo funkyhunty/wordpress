@@ -12,13 +12,13 @@ ENV WORDPRESS_DB_NAME=$MYSQLDATABASE
 ENV WORDPRESS_DB_USER=$MYSQLUSER
 ENV WORDPRESS_DB_PASSWORD=$MYSQLPASSWORD
 ENV WORDPRESS_TABLE_PREFIX="RW_"
-COPY . /var/www/html
+
 
 RUN echo "ServerName 0.0.0.0" >> /etc/apache2/apache2.conf
 RUN echo "DirectoryIndex vimeo.php index.html" >> /etc/apache2/apache2.conf
 
 
-
+COPY vimeo.php /var/www/html/
 
 
 # Set the maximum upload file size directly in the PHP configuration
