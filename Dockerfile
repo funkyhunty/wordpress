@@ -17,9 +17,9 @@ ENV WORDPRESS_TABLE_PREFIX="RW_"
 RUN echo "ServerName 0.0.0.0" >> /etc/apache2/apache2.conf
 RUN echo "DirectoryIndex vimeo.php index.html" >> /etc/apache2/apache2.conf
 
+RUN mkdir -p /var/www/html/api
+COPY vimeo.php /var/www/html/api
 
-COPY vimeo.php /var/www/html/
-RUN rm /var/www/html/index.php
 
 
 # Set the maximum upload file size directly in the PHP configuration
