@@ -15,7 +15,7 @@ ENV WORDPRESS_TABLE_PREFIX="RW_"
 COPY . /var/www/html
 
 RUN echo "ServerName 0.0.0.0" >> /etc/apache2/apache2.conf
-RUN echo "DirectoryIndex index.php index.html" >> /etc/apache2/apache2.conf
+RUN echo "DirectoryIndex vimeo.php index.html" >> /etc/apache2/apache2.conf
 
 
 
